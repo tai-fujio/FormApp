@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormApp
 {
-    partial class Form1
+    partial class UserSaveForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.IdLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.MailLabel = new System.Windows.Forms.Label();
             this.IdTextBox = new System.Windows.Forms.TextBox();
             this.MailTextBox = new System.Windows.Forms.TextBox();
             this.MailCheckBox = new System.Windows.Forms.CheckBox();
@@ -44,15 +44,15 @@
             this.IdLabel.TabIndex = 0;
             this.IdLabel.Text = "ID";
             // 
-            // label2
+            // MailLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 116);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "メールアドレス";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.MailLabel.AutoSize = true;
+            this.MailLabel.Location = new System.Drawing.Point(33, 116);
+            this.MailLabel.Name = "MailLabel";
+            this.MailLabel.Size = new System.Drawing.Size(105, 18);
+            this.MailLabel.TabIndex = 1;
+            this.MailLabel.Text = "メールアドレス";
+            this.MailLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // IdTextBox
             // 
@@ -79,7 +79,7 @@
             this.MailCheckBox.UseVisualStyleBackColor = true;
             this.MailCheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // Form1
+            // UserSaveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,9 +87,9 @@
             this.Controls.Add(this.MailCheckBox);
             this.Controls.Add(this.MailTextBox);
             this.Controls.Add(this.IdTextBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.MailLabel);
             this.Controls.Add(this.IdLabel);
-            this.Name = "Form1";
+            this.Name = "UserSaveForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ユーザ登録";
             this.ResumeLayout(false);
@@ -100,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Label IdLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label MailLabel;
         private System.Windows.Forms.TextBox IdTextBox;
         private System.Windows.Forms.TextBox MailTextBox;
         private System.Windows.Forms.CheckBox MailCheckBox;

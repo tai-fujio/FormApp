@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormApp
 {
-    public partial class Form1 : Form
+    public partial class UserSaveForm : Form
     {
-        public Form1()
+        public UserSaveForm()
         {
             InitializeComponent();
+            SetMailAddressCheckBox();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -24,7 +26,13 @@ namespace WindowsFormApp
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            SetMailAddressCheckBox();
+        }
 
+        private void SetMailAddressCheckBox()
+        {
+            MailTextBox.Enabled = MailCheckBox.Checked;
+            MailLabel.Enabled = MailCheckBox.Checked;
         }
     }
 }
