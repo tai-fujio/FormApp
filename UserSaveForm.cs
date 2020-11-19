@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormApp
 {
-    public partial class UserSaveForm : Form
+    public partial class RegisterUser : Form
     {
-        public UserSaveForm()
+        public RegisterUser()
         {
             InitializeComponent();
             SetMailAddressCheckBox();
+            Free.Checked = true;
+            PlanChange();
 
         }
 
@@ -34,5 +36,20 @@ namespace WindowsFormApp
             MailTextBox.Enabled = MailCheckBox.Checked;
             MailLabel.Enabled = MailCheckBox.Checked;
         }
+
+        private void PlanChange()
+        {
+            NoteLabel.Visible = Business.Checked;
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            PlanChange();
+        }
+
     }
 }
