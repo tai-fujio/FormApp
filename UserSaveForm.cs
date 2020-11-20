@@ -16,6 +16,7 @@ namespace WindowsFormApp
         {
             InitializeComponent();
             ComboBoxSet();
+            SetStatusLabel();
             SetMailAddressCheckBox();
             Free.Checked = true;
             PlanChange();
@@ -36,6 +37,11 @@ namespace WindowsFormApp
         {
             MailTextBox.Enabled = MailCheckBox.Checked;
             MailLabel.Enabled = MailCheckBox.Checked;
+        }
+
+        private void SetStatusLabel()
+        {
+            StatusLabel.Text = "必要事項を入力して保存してください。";
         }
 
         private void PlanChange()
@@ -67,7 +73,36 @@ namespace WindowsFormApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("保存しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show(
+                "保存しますか？",
+                "確認",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                StatusLabel.Text = "保存しました";
+            }
+            else
+            {
+                StatusLabel.Text = "キャンセルしました";
+            }
+        }
+
+        private void StatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

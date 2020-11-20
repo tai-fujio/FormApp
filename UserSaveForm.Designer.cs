@@ -41,8 +41,11 @@
             this.ButtomPanel = new System.Windows.Forms.Panel();
             this.CloseButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.Plan.SuspendLayout();
             this.ButtomPanel.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // IdLabel
@@ -147,7 +150,7 @@
             this.ButtomPanel.Controls.Add(this.CloseButton);
             this.ButtomPanel.Controls.Add(this.SaveButton);
             this.ButtomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ButtomPanel.Location = new System.Drawing.Point(0, 400);
+            this.ButtomPanel.Location = new System.Drawing.Point(0, 368);
             this.ButtomPanel.Name = "ButtomPanel";
             this.ButtomPanel.Size = new System.Drawing.Size(800, 50);
             this.ButtomPanel.TabIndex = 8;
@@ -161,6 +164,7 @@
             this.CloseButton.TabIndex = 3;
             this.CloseButton.Text = "閉じる";
             this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // SaveButton
             // 
@@ -172,6 +176,24 @@
             this.SaveButton.Text = "保存";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 418);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(800, 32);
+            this.statusStrip1.TabIndex = 9;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(181, 25);
+            this.StatusLabel.Text = "toolStripStatusLabel1";
+            this.StatusLabel.Click += new System.EventHandler(this.StatusLabel_Click);
             // 
             // RegisterUser
             // 
@@ -187,12 +209,16 @@
             this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.MailLabel);
             this.Controls.Add(this.IdLabel);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "RegisterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ユーザ登録";
+            this.Load += new System.EventHandler(this.RegisterUser_Load);
             this.Plan.ResumeLayout(false);
             this.Plan.PerformLayout();
             this.ButtomPanel.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,6 +239,8 @@
         private System.Windows.Forms.Panel ButtomPanel;
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
     }
 }
 
