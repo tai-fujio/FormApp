@@ -81,7 +81,29 @@ namespace WindowsFormApp
 
             if (dialogResult == DialogResult.Yes)
             {
-
+                using (var sw = new System.IO.StreamWriter("save.txt", true, Encoding.GetEncoding("shift_jis")))
+                {
+                    sw.Write(IdTextBox.Text);
+                    sw.Write(",");
+                    sw.Write(MailCheckBox.Checked);
+                    sw.Write(",");
+                    sw.Write(MailTextBox.Text);
+                    sw.Write(",");
+                    sw.Write(Free.Checked);
+                    sw.Write(",");
+                    if (Business.Checked)
+                    {
+                        sw.Write("1");
+                        sw.Write(",");
+                    }
+                    else
+                    {
+                        sw.Write("0");
+                        sw.Write(",");
+                    }
+                    sw.Write(EnableComboBox.Text);
+                    sw.WriteLine("");
+                }
                 StatusLabel.Text = "保存しました";
             }
             else
