@@ -15,6 +15,7 @@ namespace WindowsFormApp
         public RegisterUser()
         {
             InitializeComponent();
+            ComboBoxSet();
             SetMailAddressCheckBox();
             Free.Checked = true;
             PlanChange();
@@ -41,6 +42,14 @@ namespace WindowsFormApp
         {
             NoteLabel.Visible = Business.Checked;
         }
+
+        private void ComboBoxSet()
+        {
+            EnableComboBox.Items.Add("有効");
+            EnableComboBox.Items.Add("無効");
+            EnableComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            EnableComboBox.SelectedIndex = 0;
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -51,5 +60,14 @@ namespace WindowsFormApp
             PlanChange();
         }
 
+        private void EnableComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("保存しますか？","確認",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+        }
     }
 }

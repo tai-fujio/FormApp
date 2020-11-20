@@ -34,10 +34,15 @@
             this.MailTextBox = new System.Windows.Forms.TextBox();
             this.MailCheckBox = new System.Windows.Forms.CheckBox();
             this.Plan = new System.Windows.Forms.GroupBox();
-            this.Free = new System.Windows.Forms.RadioButton();
             this.Business = new System.Windows.Forms.RadioButton();
+            this.Free = new System.Windows.Forms.RadioButton();
             this.NoteLabel = new System.Windows.Forms.Label();
+            this.EnableComboBox = new System.Windows.Forms.ComboBox();
+            this.ButtomPanel = new System.Windows.Forms.Panel();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.Plan.SuspendLayout();
+            this.ButtomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // IdLabel
@@ -96,17 +101,6 @@
             this.Plan.Text = "プラン";
             this.Plan.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // Free
-            // 
-            this.Free.AutoSize = true;
-            this.Free.Location = new System.Drawing.Point(26, 48);
-            this.Free.Name = "Free";
-            this.Free.Size = new System.Drawing.Size(69, 22);
-            this.Free.TabIndex = 6;
-            this.Free.TabStop = true;
-            this.Free.Text = "無料";
-            this.Free.UseVisualStyleBackColor = true;
-            // 
             // Business
             // 
             this.Business.AutoSize = true;
@@ -119,6 +113,17 @@
             this.Business.UseVisualStyleBackColor = true;
             this.Business.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // Free
+            // 
+            this.Free.AutoSize = true;
+            this.Free.Location = new System.Drawing.Point(26, 48);
+            this.Free.Name = "Free";
+            this.Free.Size = new System.Drawing.Size(69, 22);
+            this.Free.TabIndex = 6;
+            this.Free.TabStop = true;
+            this.Free.Text = "無料";
+            this.Free.UseVisualStyleBackColor = true;
+            // 
             // NoteLabel
             // 
             this.NoteLabel.AutoSize = true;
@@ -128,11 +133,53 @@
             this.NoteLabel.TabIndex = 6;
             this.NoteLabel.Text = "無制限で使えます";
             // 
+            // EnableComboBox
+            // 
+            this.EnableComboBox.FormattingEnabled = true;
+            this.EnableComboBox.Location = new System.Drawing.Point(36, 328);
+            this.EnableComboBox.Name = "EnableComboBox";
+            this.EnableComboBox.Size = new System.Drawing.Size(181, 26);
+            this.EnableComboBox.TabIndex = 7;
+            this.EnableComboBox.SelectedIndexChanged += new System.EventHandler(this.EnableComboBox_SelectedIndexChanged);
+            // 
+            // ButtomPanel
+            // 
+            this.ButtomPanel.Controls.Add(this.CloseButton);
+            this.ButtomPanel.Controls.Add(this.SaveButton);
+            this.ButtomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ButtomPanel.Location = new System.Drawing.Point(0, 400);
+            this.ButtomPanel.Name = "ButtomPanel";
+            this.ButtomPanel.Size = new System.Drawing.Size(800, 50);
+            this.ButtomPanel.TabIndex = 8;
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CloseButton.Location = new System.Drawing.Point(131, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(124, 50);
+            this.CloseButton.TabIndex = 3;
+            this.CloseButton.Text = "閉じる";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SaveButton.Location = new System.Drawing.Point(0, 0);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(131, 50);
+            this.SaveButton.TabIndex = 2;
+            this.SaveButton.Text = "保存";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.button3_Click);
+            // 
             // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ButtomPanel);
+            this.Controls.Add(this.EnableComboBox);
             this.Controls.Add(this.NoteLabel);
             this.Controls.Add(this.Plan);
             this.Controls.Add(this.MailCheckBox);
@@ -145,6 +192,7 @@
             this.Text = "ユーザ登録";
             this.Plan.ResumeLayout(false);
             this.Plan.PerformLayout();
+            this.ButtomPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,6 +209,10 @@
         private System.Windows.Forms.RadioButton Free;
         private System.Windows.Forms.RadioButton Business;
         private System.Windows.Forms.Label NoteLabel;
+        private System.Windows.Forms.ComboBox EnableComboBox;
+        private System.Windows.Forms.Panel ButtomPanel;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
 
