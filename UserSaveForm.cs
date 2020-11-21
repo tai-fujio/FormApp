@@ -73,6 +73,26 @@ namespace WindowsFormApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if(IdTextBox.Text.Contains(","))
+            {
+                MessageBox.Show("IDにカンマは入力できません",
+                    "警告",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                IdTextBox.Focus();
+                return;
+            }
+
+            if(MailCheckBox.Text.Contains(","))
+            {
+                MessageBox.Show("メールアドレスにカンマは入力できません",
+                    "警告",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                MailCheckBox.Focus();
+                return;
+            }
+
             DialogResult dialogResult = MessageBox.Show(
                 "保存しますか？",
                 "確認",
