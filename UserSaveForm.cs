@@ -73,6 +73,15 @@ namespace WindowsFormApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if(IdTextBox.Text.Trim().Length < 1)
+            {
+                MessageBox.Show("IDを入力してください",
+                    "警告",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                IdTextBox.Focus();
+                return;
+            }
             if(IdTextBox.Text.Contains(","))
             {
                 MessageBox.Show("IDにカンマは入力できません",
