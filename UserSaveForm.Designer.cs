@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormApp
 {
-    partial class RegisterUser
+    partial class UserSaveForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -195,7 +195,7 @@
             this.StatusLabel.Text = "toolStripStatusLabel1";
             this.StatusLabel.Click += new System.EventHandler(this.StatusLabel_Click);
             // 
-            // RegisterUser
+            // UserSaveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -210,7 +210,7 @@
             this.Controls.Add(this.MailLabel);
             this.Controls.Add(this.IdLabel);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "RegisterUser";
+            this.Name = "UserSaveForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ユーザ登録";
             this.Load += new System.EventHandler(this.RegisterUser_Load);

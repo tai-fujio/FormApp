@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormApp
 {
-    public partial class RegisterUser : Form
+    public partial class UserSaveForm : Form
     {
-        public RegisterUser()
+        public UserSaveForm()
         {
             InitializeComponent();
             ComboBoxSet();
@@ -110,15 +110,13 @@ namespace WindowsFormApp
 
             if (dialogResult == DialogResult.Yes)
             {
-                using (var sw = new System.IO.StreamWriter("save.txt", true, Encoding.GetEncoding("shift_jis")))
+                using (var sw = new System.IO.StreamWriter("save.csv", true, Encoding.GetEncoding("shift_jis")))
                 {
                     sw.Write(IdTextBox.Text);
                     sw.Write(",");
                     sw.Write(MailCheckBox.Checked);
                     sw.Write(",");
                     sw.Write(MailTextBox.Text);
-                    sw.Write(",");
-                    sw.Write(Free.Checked);
                     sw.Write(",");
                     if (Business.Checked)
                     {

@@ -16,5 +16,22 @@ namespace WindowsFormApp
         {
             InitializeComponent();
         }
+
+        private void UserSaveFormButton_Click(object sender, EventArgs e)
+        {
+            using (UserSaveForm userSaveForm = new UserSaveForm())
+            {
+                userSaveForm.ShowDialog();
+            }
+
+        }
+
+        private void UserListFormButton_Click(object sender, EventArgs e)
+        {
+            using (UserListForm userListForm = new UserListForm())
+            {
+                userListForm.ShowDialog();
+            }
+        }
     }
 }

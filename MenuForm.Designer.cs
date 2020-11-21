@@ -41,6 +41,7 @@
             this.UserSaveFormButton.TabIndex = 0;
             this.UserSaveFormButton.Text = "ユーザ登録";
             this.UserSaveFormButton.UseVisualStyleBackColor = true;
+            this.UserSaveFormButton.Click += new System.EventHandler(this.UserSaveFormButton_Click);
             // 
             // UserListFormButton
             // 
@@ -51,6 +52,7 @@
             this.UserListFormButton.TabIndex = 1;
             this.UserListFormButton.Text = "ユーザリスト";
             this.UserListFormButton.UseVisualStyleBackColor = true;
+            this.UserListFormButton.Click += new System.EventHandler(this.UserListFormButton_Click);
             // 
             // MenuForm
             // 
